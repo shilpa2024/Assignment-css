@@ -1,0 +1,81 @@
+
+<!-- Qs :
+Create a simple page with some div tags and show different ways to add CSS as well as what happens when you target the same elements with inline, internal CSS also , utilize comments in the proect where required . -->
+
+<!-- Ans : -->
+<!-- Certainly! Below is an example of a simple HTML page with `<div>` tags, demonstrating different ways to add CSS using inline, internal, and external methods. Comments have been added for clarification: -->
+
+    
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A simple HTML page with different ways of adding CSS.">
+        
+        <!-- Internal CSS -->
+        <style>
+            /* Internal CSS - Styling for the entire page */
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f0f0f0;
+                margin: 20px;
+            }
+    
+            /* Internal CSS - Styling for the div with ID "container" */
+            #container {
+                border: 2px solid #333;
+                padding: 20px;
+                margin: 10px;
+            }
+    
+            /* Internal CSS - Styling for the div with class "box" */
+            .box {
+                background-color: #fff;
+                padding: 10px;
+                margin: 5px;
+            }
+        </style>
+    
+        <!-- External CSS - Linking to a separate CSS file (styles.css) -->
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    
+    </head>
+    
+    <body>
+        <!-- Inline CSS - Styling applied directly to the element -->
+        <div style="color: blue; font-size: 18px;">
+            This div has inline CSS.
+        </div>
+    
+        <!-- Internal CSS - Styling applied through internal CSS -->
+        <div id="container">
+            <h1>This is a container div</h1>
+            <p class="box">This is a box with internal CSS.</p>
+            <p class="box">Another box with internal CSS.</p>
+        </div>
+    
+        <!-- External CSS - Styling applied through an external CSS file -->
+        <div class="box">
+            This is a box with external CSS.
+        </div>
+    
+        <!-- Inline CSS - Styling applied directly to the element, overriding internal CSS -->
+        <div style="color: red;">
+            This div has inline CSS, which overrides the internal CSS.
+        </div>
+    
+    </body>
+    
+    </html>
+    
+    
+    <!-- In this example:
+    
+    - Inline CSS is applied directly within the `style` attribute of a `<div>` element.
+    - Internal CSS is used within the `<style>` tag in the head of the HTML document.
+    - External CSS is linked through a separate CSS file (`styles.css`).
+    - Comments are added throughout the code to explain the purpose of each section.
+    
+    For a more organized and maintainable approach, it's generally recommended to use external CSS files for larger projects, internal CSS for smaller styles specific to a page, and inline CSS sparingly. The order of precedence for styling is inline > internal > external. If there are conflicting styles, the one with higher precedence will be applied. -->
